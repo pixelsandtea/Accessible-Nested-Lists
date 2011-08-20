@@ -1,0 +1,101 @@
+* {
+	margin:0;
+	padding:0;
+}
+:focus {
+	outline:none;/*--REMEMBER TO DEFINE ANOTHER FOCUS STYLE--*/
+}
+.nav {
+	font-size:13px;
+	height:100%;
+	float:left;
+}
+.nav, .nav ul {
+	list-style:none;
+}
+.nav li {
+	position:relative;
+	float:left;
+	height:100%;
+}
+.nav li li {
+	clear:both;
+}
+.nav li a {
+	background-color:#f4f4f4;
+	display:block;
+	color:#bdbdbd;
+	text-decoration:none;
+	padding:17px 14px 14px;
+	border-right:1px solid #e7e7e7;
+	border-bottom:1px solid #e7e7e7;
+}
+.nav ul {
+	position:absolute;
+	left:-10000px;
+	width:100%;
+}
+.nav ul ul {
+	margin:-51px 0 0 14.35em;
+	left:-1px;
+	border-top:1px solid #e7e7e7;
+}
+.nav li li a {
+	opacity:0.9;
+	width:12em;
+	padding-bottom:17px;
+	border-left:1px solid #e7e7e7;	
+}
+.nav li a:hover, .nav li a:focus, .nav li.sfhover a {
+	background:#454545;
+	color:#ffffff;
+}
+.nav > li a:not(:only-child), .nav > li a.menuParent {
+	background:#f4f4f4 url('menu-indicator.png') no-repeat center 90%;
+}
+.nav > li a:not(:only-child):hover, .nav > li a:not(:only-child):focus, .nav > li a.menuParent:hover, .nav > li a.menuParent:focus {
+	background:#454545 url('menu-indicator-hover.png') no-repeat center 90%;
+}
+.nav li ul li a:not(:only-child), .nav li ul li a.menuParent {
+	background:#f4f4f4 url('menu-indicator.png') no-repeat 90% center;
+}
+.nav li ul li a:not(:only-child):hover, .nav li ul li a:not(:only-child):focus, .nav li ul li a.menuParent:hover, .nav li ul li a.menuParent:focus {
+	background:#454545 url('menu-indicator-hover.png') no-repeat 90% center;
+}
+.nav li a:active {
+	background-color:#f4f4f4;
+	color:#454545;
+	text-decoration:line-through;
+}
+.nav li * li a:focus, .nav li * li a:active {
+	position:relative;
+	left:9999px;
+	top:0;
+	z-index:1;
+}
+.nav li a:focus + ul.parent {
+	top:47px;
+}
+.nav li a:focus + ul, .nav li ul.navFirstChild {
+	left:-1px;
+	margin-left:0;
+}
+.nav li ul li a:focus + ul.children {
+	left:9999px;
+	margin-left:100%;
+}
+.nav li ul.navFirstChild li a:focus + ul.children {
+	left:-1px;
+	top:50px;
+}
+.nav li:hover li a:focus, .nav li:hover li a:active, .nav li.sfhover li a:active, .nav li:hover li li a:focus, .nav li:hover li li a:active, .nav li.sfhover li li a:active, .nav li:hover li li li a:focus, .nav li:hover li li li a:active, .nav li.sfhover li li li a:active {
+	position:relative;
+	left:0;
+	top:0;
+}
+.nav li:hover ul ul, .nav li:hover ul ul ul, .nav li.sfhover ul ul, .nav li.sfhover ul ul ul, .nav li a:focus + ul ul, .nav li ul.navFirstChild ul.children, .nav li ul.navFirstChild ul.navNextChild ul.children {
+	left:-10000px;
+}
+.nav li:hover ul, .nav li li:hover ul, ul.nav li li li:hover ul, .nav li.sfhover ul, .nav li li.sfhover ul, .nav li li li.sfhover ul, .nav li li:hover ul, ul.nav li li li:hover ul, .nav li.sfhover ul, .nav li li.sfhover ul, .nav li li li.sfhover ul, .nav li ul.navFirstChild li a:focus + ul.children.navNextChild, .nav li ul.navFirstChild li.sfhover ul.children.navNextChild, .nav li ul.navFirstChild ul.children.navNextChild, .nav li ul.navFirstChild ul.children.navNextChild ul.children.navNextChild {
+	left:-1px;
+}

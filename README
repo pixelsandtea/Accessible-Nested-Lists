@@ -1,0 +1,17 @@
+Accessible Nested Lists
+
+Created by Ben Green of Pixels & Tea, 2011
+http://www.pixelsandtea.com
+
+Feel free to edit and redistribute this script as you wish, though please respect me as the original author of the script by keeping my name and website at the top of this file and package this script with this readme file. Attribution for this script is not required anywhere else though it would certainly be appreciated, thank you very much.
+
+-- USAGE --
+1. Re-write the code of the HTML nested list, in the same format using, using your own anchor texts, titles and links of course.
+
+2. Create a small image which will indicate if a list has any child items. You should also create another similar image to indicate when that parent list is focused or has a child item which is focused.
+
+3. Add the content of menu.css to your main stylesheet and adjust the styles to match the rest of your existing styles. Remember to change the stylesheet link in HTML to match your existing stylesheet.
+
+IMPORTANT - The link to the jQuery library and the IE6 conditional statement must stay in the <head> of the HTML in order for the list to be accessible in IE6.
+
+A demo and thorough explanation of this script can be found on my portfolio website at http://www.pixelsandtea.com/2011/07/14/light-weight-accessible-drop-down-list/
